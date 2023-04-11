@@ -3,11 +3,11 @@
   <h2>Add a Member</h2>
   <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
     <input id="name" type="text" placeholder="Name" formControlName="name">
-    <select            (change)="changeChar($event)"
-                       formControlName="character"
+    <select
+      (change)="changeChar($event)"
+       formControlName="character"
     >
-      <option value="">Choose a Character</option>
-      <option *ngFor="let char of chars" [ngValue]="char">{{char}}</option>
+      <option *ngFor="let char of chars" [value]="char">{{char}}</option>
     </select>
     <button type="submit" >Add a Member</button>
   </form>

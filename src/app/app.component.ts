@@ -17,9 +17,7 @@ export class AppComponent {
   members:any= [];
 
   changeChar(e: any) {
-    this.character?.setValue(e.target.value, {
-      onlySelf: true,
-    });
+    this.character?.setValue(e.target.value);
   }
   get character(){
     return this.registrationForm.get("character")
