@@ -1,0 +1,27 @@
+<div class="container" xmlns="http://www.w3.org/1999/html">
+  <h1>Broim Vir</h1>
+  <h2>Add a Member</h2>
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <input id="name" type="text" placeholder="Name" formControlName="name">
+    <select            (change)="changeChar($event)"
+                       formControlName="character"
+    >
+      <option value="">Choose a Character</option>
+      <option *ngFor="let char of chars" [ngValue]="char">{{char}}</option>
+    </select>
+    <button type="submit" >Add a Member</button>
+  </form>
+  <h2>Members</h2>
+  <table>
+    <tbody>
+    <ng-container *ngFor="let member of members">
+      <tr>
+        <td>{{member.name}}</td>
+        <td>{{member.char}}</td>
+        <td>Paid : <input type="checkbox"></td>
+        <td><button>Delete Member</button></td>
+      </tr>
+    </ng-container>
+    </tbody>
+  </table>
+</div>
