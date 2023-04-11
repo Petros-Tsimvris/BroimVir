@@ -36,4 +36,9 @@ export class AppComponent {
     this.members.push(newUser)
     console.log(this.members)
   }
+
+  deleteMember(name:any) {
+    console.log(name)
+   this.members =  this.members.filter((member:any)=> member.name != name)
+  }
 }

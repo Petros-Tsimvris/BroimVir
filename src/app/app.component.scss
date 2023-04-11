@@ -1,15 +1,24 @@
 .container{
-  width: 100vw;
-  height: 100vh;
-  background-color: darkgray;
   display: flex;
   flex-direction: column;
 align-items: center;
   h1{
   margin: 30px 0;
+    border-bottom:10px solid springgreen;
+    border-left:2px solid springgreen;
+    border-right:2px solid springgreen;
+    border-top:5px solid springgreen;
+    padding:6px 15px;
 }
   h2{
     margin:16px 0 ;
+    border-bottom:5px solid springgreen;
+    border-left:1px solid springgreen;
+    border-right:1px solid springgreen;
+    border-top:2px solid springgreen;
+    padding:6px 15px;
+
+
   }
   form{
     display: flex;
@@ -38,11 +47,22 @@ align-items: center;
     border-collapse: collapse;
 
     tr{
+      padding:10px;
       border-bottom: 1pt solid black;
       td{
+        padding:10px;
+
         width:25%;
         text-align: center;
       }
   }
   }
+}
+.deleteButton{
+  border:none;
+  border-radius: 5px;
+  padding: 8px;
+  text-align: center;
+  background-color: red;
+  color:white;
 }

@@ -18,8 +18,11 @@
       <tr>
         <td>{{member.name}}</td>
         <td>{{member.char}}</td>
-        <td>Paid : <input type="checkbox"></td>
-        <td><button>Delete Member</button></td>
+        <td>
+          <label [for]="member.name">Paid</label> :
+          <input name="paid" [id]="member.name" type="checkbox"></td>
+        <td><button class="deleteButton" (click)="deleteMember(member.name)">Delete
+          Member</button></td>
       </tr>
     </ng-container>
     </tbody>
